@@ -1,0 +1,17 @@
+{
+  "id": "inertiadampening",
+  "name": "Inertia Dampening",
+  "version": "@version@",
+  "descriptions": "Immediate dampening of creative flight inertia",
+  "side": "client",
+  "license": "Apache 2.0",
+  "authors": [
+    {
+      "name": "InsomniaKitten",
+      "website": "https://github.com/InsomniaKitten"
+    }
+  ],
+  "mixins": {
+    "common": "mixins.inertiadampening.json"
+  }
+}
