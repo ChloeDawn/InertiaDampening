@@ -27,8 +27,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LivingEntity.class)
 @SuppressWarnings("ConstantConditions")
-final class LivingEntityMixin {
-  private LivingEntityMixin() {}
+abstract class LivingEntityMixin extends Entity {
+  private LivingEntityMixin() {
+    super(null, null);
+  }
 
   @Inject(
     method = "updateMovement",
@@ -44,8 +46,8 @@ final class LivingEntityMixin {
       if (player.abilities.flying) {
         final Input input = player.input;
         if (!input.forward && !input.back && !input.left && !input.right) {
-          ((Entity) (Object) this).velocityX = 0.0;
-          ((Entity) (Object) this).velocityZ = 0.0;
+          velocityX = 0.0;
+          velocityZ = 0.0;
         }
       }
     }
