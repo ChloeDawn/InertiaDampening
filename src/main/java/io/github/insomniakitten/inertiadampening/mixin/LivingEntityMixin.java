@@ -40,10 +40,13 @@ final class LivingEntityMixin {
   )
   private void resetVelocity(final CallbackInfo ci) {
     if ((Object) this instanceof ClientPlayerEntity) {
-      final Input input = ((ClientPlayerEntity) (Object) this).input;
-      if (!input.forward && !input.back && !input.left && !input.right) {
-        ((Entity) (Object) this).velocityX = 0.0;
-        ((Entity) (Object) this).velocityZ = 0.0;
+      final ClientPlayerEntity player = (ClientPlayerEntity) (Object) this;
+      if (player.abilities.flying) {
+        final Input input = player.input;
+        if (!input.forward && !input.back && !input.left && !input.right) {
+          ((Entity) (Object) this).velocityX = 0.0;
+          ((Entity) (Object) this).velocityZ = 0.0;
+        }
       }
     }
   }
