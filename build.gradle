@@ -17,7 +17,7 @@ apply plugin: 'java'
 apply plugin: 'fabric-loom'
 
 archivesBaseName = 'InertiaDampening'
-group = 'io.github.insomniakitten.inertiadampening'
+group = 'io.github.insomniakitten'
 version = inertiaDampeningVersion
 sourceCompatibility = 1.8
 
