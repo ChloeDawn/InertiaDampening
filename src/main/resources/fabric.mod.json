@@ -1,17 +1,32 @@
 {
+  "schemaVersion": 1,
   "id": "inertiadampening",
   "name": "Inertia Dampening",
-  "version": "@version@",
-  "descriptions": "Immediate dampening of creative flight inertia",
-  "side": "client",
-  "license": "Apache 2.0",
+  "version": "$version",
+  "description": "Immediate dampening of creative flight inertia",
+  "depends": {
+    "fabricloader": ">=0.8.8"
+  },
+  "entrypoints": {
+    "client": [
+      "dev.sapphic.inertiadampening.InertiaDampening::init"
+    ]
+  },
+  "mixins": [
+    "mixins/inertiadampening/mixins.json"
+  ],
   "authors": [
     {
-      "name": "InsomniaKitten",
-      "website": "https://github.com/InsomniaKitten"
+      "name": "Chloe Dawn",
+      "contact": {
+        "email": "chloe@sapphic.dev",
+        "homepage": "https://sapphic.dev"
+      }
     }
   ],
-  "mixins": {
-    "common": "mixins.inertiadampening.json"
+  "contact": {
+    "homepage": "https://git.io/JfpAc",
+    "sources": "https://git.io/JfpAc",
+    "issues": "https://git.io/JfpAl"
   }
 }

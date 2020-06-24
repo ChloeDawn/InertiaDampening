@@ -1,0 +1,8 @@
+{
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "required": true,
+  "package": "dev.sapphic.inertiadampening.mixin",
+  "client": [ "AccessibilityOptionsMixin", "LivingEntityMixin" ],
+  "refmap": "mixins/inertiadampening/refmap.json"
+}
