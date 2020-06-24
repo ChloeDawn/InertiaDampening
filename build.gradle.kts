@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "dev.sapphic"
-version = "3.0.0"
+version = "3.1.0"
 
 java {
   sourceCompatibility = JavaVersion.VERSION_1_8
@@ -12,7 +12,7 @@ java {
 }
 
 minecraft {
-  refmapName = "mixins/fovlock/refmap.json"
+  refmapName = "mixins/inertiadampening/refmap.json"
   runDir = "run"
 }
 
